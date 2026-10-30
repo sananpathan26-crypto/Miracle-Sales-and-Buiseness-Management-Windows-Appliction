@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Order Confirmed</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        /* Arrow style */
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #1a1a40;
+            font-weight: bold;
+        }
+
+            .back-arrow:hover {
+                color: #facc15;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#categories">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <!--
+                <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+    just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Arrow -->
+    <a href="index.html" class="back-arrow">←</a>
+
+    <div class="box">
+        <h2>✅ Order Confirmed</h2>
+        <p>Thank you for your order.</p>
+        <p>Your order will be delivered soon </p>
+    </div>
+
+    <script>function openCart() {
+            window.location.href = "cart.html";
+        }</script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Orders</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f6fa;
+        }
+        .header {
+            background: rgb(26,26,64);
+            color: white;
+            padding: 15px 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .new-order {
+            background-color: #fff3cd !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Online Orders</div>
+
+    <div class="container mt-4">
+        <button class="btn btn-primary mb-3" onclick="markSeen()">Mark All Seen</button>
+
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Mobile</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Payment</th>
+                    <th>status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="ordersBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function loadOrders() {
+            fetch("http://localhost:5271/api/online-orders/all")
+                .then(res => res.json())
+                .then(data => {
+                    const body = document.getElementById("ordersBody");
+                    body.innerHTML = "";
+
+                    data.forEach(o => {
+                        const row = document.createElement("tr");
+
+                        if (o.isSeen === false) {
+                            row.classList.add("new-order");
+                        }
+
+                        row.innerHTML = `
+                        <td>${o.orderId}</td>
+                        <td>${o.customerName}</td>
+                        <td>${o.mobile}</td>
+                        <td>${o.productName}</td>
+                        <td>${o.quantity}</td>
+                        <td>₹${o.price}</td>
+                        <td>${o.paymentMode}</td>
+                                        <td>
+    <select class="form-select form-select-sm"
+            onchange="updateStatus(${o.id}, this.value)">
+        <option ${o.status === 'Pending' ? 'selected' : ''}>Pending</option>
+        <option ${o.status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
+        <option ${o.status === 'Packed' ? 'selected' : ''}>Packed</option>
+        <option ${o.status === 'Shipped' ? 'selected' : ''}>Shipped</option>
+        <option ${o.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
+    </select>
+</td>
+                        <td>${new Date(o.orderDate).toLocaleString()}</td>
+                    `;
+
+                        body.appendChild(row);
+                    });
+                })
+                .catch(err => console.error("API Error:", err));
+        }
+
+        window.onload = loadOrders;
+
+
+        
+            function markSeen() {
+                fetch("http://localhost:5271/api/online-orders/markseen", {
+                    method: "POST"
+                })
+                    .then(() => loadOrders());
+}
+    
+
+    </script>
+
+
+</body>
+</html>

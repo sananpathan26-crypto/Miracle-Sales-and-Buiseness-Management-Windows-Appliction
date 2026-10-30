@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Hard Disks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="product-page-body">
+
+
+
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <!--
+                <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+    just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-btn">←</a>
+
+    <div class="shop-container">
+
+        <!-- BRAND FILTER -->
+        <div class="brand-filters">
+            <span class="brand-item active" data-filter="all">All</span>
+            <span class="brand-item" data-filter="seagate">Seagate</span>
+
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="product-grid">
+
+            <div class="product-card" data-brand="seagate" data-id="had1">
+                <div class="product-img-box">
+                    <img src="images/hard1.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>Seagate One Touch HDD External Drive</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹13,999</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="seagate" data-id="had2">
+                <div class="product-img-box">
+                    <img src="images/hd2.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>Seagate One Touch HDD External Drive</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹13,999</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="seagate" data-id="had3">
+                <div class="product-img-box">
+                    <img src="images/hd3.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>8TB 3.5" Expansion Desktop USB 3.0 External Hard Drive</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹29,493</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-brand="seagate" data-id="had4">
+                <div class="product-img-box">
+                    <img src="images/hd4.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>SEAGATE GAME DRIVE FOR PS4 2TB</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹26,584</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-brand="seagate" data-id="had5">
+                <div class="product-img-box">
+                    <img src="images/hd5.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>Seagate Backup Plus Hub 4 TB External Hard Drive – USB 3.0</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹7,899</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="seagate" data-id="had6">
+                <div class="product-img-box">
+                    <img src="images/hd6.webp" alt="seagate">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Seagate</p>
+                    <h3>Seagate One Touch Hub Desktop External HDD</h3>
+                    <p class="specs">24×7 CCTV Use • SATA</p>
+                    <div class="price-box">
+                        <span class="price">₹65,799</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- <script>
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.product-card');
+            const id = card.dataset.id;
+            window.location.href = `product.html?id=${id}`;
+        });
+    });
+    </script> -->
+    <!-- BRAND FILTER SCRIPT -->
+    <!-- <script>
+    const filterButtons = document.querySelectorAll('.brand-item');
+    const cards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.dataset.filter;
+
+            cards.forEach(card => {
+                card.style.display =
+                    filter === 'all' || card.dataset.brand === filter
+                    ? 'block'
+                    : 'none';
+            });
+        });
+    });
+
+    </script> -->
+
+    <script>
+const productCards = document.querySelectorAll('.product-card');
+
+productCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const productId = card.getAttribute('data-id');
+        window.location.href = `product.html?id=${productId}`;
+    });
+});
+
+
+
+        function openCart() {
+            window.location.href = "cart.html";
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

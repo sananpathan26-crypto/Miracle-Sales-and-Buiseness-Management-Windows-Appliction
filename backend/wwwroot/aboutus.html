@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Miracle CCTV Kolhapur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            /* Theme: Deep Space & Modern Cyan */
+            --primary: #16213e; /* Deep Navy (Matches the vibe of 26,26,64) */
+            --secondary: #00d2ff; /* Bright Cyan Accent */
+            --accent: #e94560; /* Soft Crimson for buttons */
+            --bg-light: #f4f7fa; /* Light grayish background */
+            --text-dark: #1a1a2e;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: var(--bg-light);
+            color: #444;
+            line-height: 1.6;
+        }
+
+
+
+        .hero {
+            background: linear-gradient(rgba(22, 33, 62, 0.9), rgba(22, 33, 62, 0.8)), url('https://images.unsplash.com/photo-1557597774-9d2739f85a76?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 35px 20px; /* 🔽 Reduced height */
+            min-height: 200px; /* Optional: fixed compact look */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 8px;
+                letter-spacing: 1px;
+            }
+
+        */
+        .hero p {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* CONTENT SECTIONS */
+        .section {
+            padding: 60px 10%;
+        }
+
+        .section-alt {
+            background: var(--white);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+            .section h2::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 3px;
+                background: var(--secondary);
+                margin-top: 10px;
+            }
+
+        /* WHY CHOOSE US GRID */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            padding: 35px 25px;
+            background: var(--white);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+            .feature-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+                border-color: var(--secondary);
+            }
+
+            .feature-box i {
+                font-size: 2.5rem;
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+
+            .feature-box h3 {
+                margin-bottom: 10px;
+                color: var(--primary);
+            }
+
+        /* BRAND CARDS */
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .brand-card img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        /* CONTACT CTA */
+        .contact-cta {
+            background: var(--primary);
+            color: white;
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .btn:hover {
+                background: var(--white);
+                transform: translateY(-3px);
+            }
+
+        footer {
+            background: #0b132b;
+            color: #778da9;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 40px 5%;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <i class="fas fa-shopping-cart" title="Cart"></i>
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Your Security, Our Priority</h1>
+        <p>Expert Surveillance in Kolhapur</p>
+    </div>
+
+    <div class="section section-alt">
+        <div style="max-width: 850px; margin: auto; text-align: center;">
+            <h2>About Miracle CCTV</h2>
+            <p style="font-size: 1.1rem; color: #666; margin-top: 20px;">
+                Located in <strong>Shahupuri, Kolhapur</strong>, Miracle CCTV is dedicated to providing cutting-edge security technology to homes and businesses. We specialize in HD surveillance, IP camera networking, and AI-integrated security systems.
+            </p>
+            <p style="margin-top: 15px;">
+                Our mission is simple: to provide the local community with reliable, high-quality protection that works when it matters most.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div style="text-align: center;">
+            <h2>Why Choose Us?</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-tools"></i>
+                <h3>Expert Installation</h3>
+                <p>Clean, professional wiring and strategic placement for 100% blind-spot reduction.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Genuine Brands</h3>
+                <p>Directly sourced products from Hikvision, CP Plus, and Dahua with official warranties.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h3>Lifetime Support</h3>
+                <p>We provide prompt after-sales service and remote assistance whenever you need it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-alt">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2>Authorized Partners</h2>
+            <p>Bringing Global Security Standards to your doorstep.</p>
+        </div>
+        <div class="brands">
+            <div class="brand-card"><img src="images/hikl.webp" alt="Hikvision"></div>
+            <div class="brand-card"><img src="images/cppluslogo.png" alt="CP Plus"></div>
+            <div class="brand-card"><img src="images/dahlogo.png" alt="Dahua"></div>
+        </div>
+    </div>
+
+    <div class="contact-cta">
+        <h2>Secure Your Property Today</h2>
+        <p>Visit us at Shahupuri, Kolhapur or call for a free site assessment.</p>
+        <a href="tel:+919800000000" class="btn"><i class="fas fa-phone-alt"></i> Call +91 98XXX XXXXX</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Miracle CCTV Kolhapur. Authorized Dealer: Hikvision | CP Plus | Dahua</p>
+    </footer>
+
+
+    <script>function openCart() {
+            window.location.href = "cart.html";
+        }</script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Premium Cameras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+        .brand-filters {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px; /* ADD THIS */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+        .brand-item {
+            color: #facc15;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .brand-item:hover, .brand-item.active {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+       
+        .product-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="product-page-body">
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration:none;"><span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="shop-container">
+        
+        <div class="brand-filters" id="filter-container">
+            <span class="brand-item active" data-filter="all">All</span>
+            <span class="brand-item" data-filter="hikvision">HIKVISION</span>
+            <span class="brand-item" data-filter="cpplus">CP PLUS</span>
+            <span class="brand-item" data-filter="dahua">DAHUA</span>
+            <span class="brand-item" data-filter="trueview">TRUEVIEW</span>
+        </div>
+
+       
+        <div class="product-grid" id="product-grid">
+            
+            <div class="product-card" data-brand="hikvision" data-id="hik1">
+                <div class="product-img-box">
+                     <img src="images/hik1.jpg" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>HIKVISION HD Bullet 2.0MP AUDIO DS-2CE16D0T-ITPF</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹1,413</span>
+                        <span class="old-price">₹2,000</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="hikvision" data-id="hik2">
+                <div class="product-img-box">
+                     <img src="images/hik2.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>HikVision DS-2CE5AC0T-IRPF 1MP 720P Turbo HD Body Dome Camera</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹1,520</span>
+                        <span class="old-price">₹2,000</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             
+
+             <div class="product-card" data-brand="hikvision" data-id="hik3">
+                <div class="product-img-box">
+                     <img src="images/hik13.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision IP 2MP Bullet H.265+ Network CCTV</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹5,199</span>
+                        <span class="old-price">₹5,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="hikvision" data-id="hik4">
+                <div class="product-img-box">
+                     <img src="images/hik4.jpg" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>HIKVISION 5Mp/1080p [Built-in Audio Mic | Color Night Vision] Outdoor Wired Color CCTV Camera for Dvr, Ds-2Ce70Kf0T-Pfs White</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹2,699</span>
+                        <span class="old-price">₹3,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="hikvision" data-id="hik5">
+                <div class="product-img-box">
+                     <img src="images/hik5.jpg" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>HIKVISION DS-2AE4123TI-D PTZ Dome Camera</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹19,588</span>
+                        <span class="old-price">₹20,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="hikvision" data-id="hik6">
+                <div class="product-img-box">
+                     <img src="images/hik6.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision DS-2DE2C400SCG-E(F0)(O-STD) (2560 x 1440 Pixels), Network camera, Black, White</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹8,269</span>
+                        <span class="old-price">₹9,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="hikvision" data-id="hik7">
+                <div class="product-img-box">
+                     <img src="images/hik7.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>AHD, HD-CVI, HD-TVI, PAL CAMERA DS-2CE76D0T-LPFS(2.8MM) - 1080p Hikvision</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹5,152</span>
+                        <span class="old-price">₹6,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+              <div class="product-card" data-brand="hikvision" data-id="hik8">
+                <div class="product-img-box">
+                     <img src="images/hik8.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision 5MP White Ultrahd Infrared Cctv Bullet Camera, DS-2CE1AHOT-ITPF</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹2,282</span>
+                        <span class="old-price">₹3,000</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+
+             <div class="product-card" data-brand="hikvision" data-id="hik9">
+                <div class="product-img-box">
+                     <img src="images/hik9.jpg" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision 2 Mp Manual Varifocal Turret Camera</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹2,250</span>
+                        <span class="old-price">₹2,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="hikvision" data-id="hik10">
+                <div class="product-img-box">
+                     <img src="images/hik10.webp" alt = HIKVISION > 
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision 4K CMOS Sensor Outdoor Network Camera</h3>
+                    <p class="specs">AI Detection • 30m Night Vision</p>
+                    <div class="price-box">
+                        <span class="price">₹15,265</span>
+                        <span class="old-price">₹16,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-card" data-brand="cpplus" data-id="cp1">
+                <div class="product-img-box">
+                    <img src="images/cp1.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP Plus EZ P21 Security Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹1,199</span>
+                        <span class="old-price">₹2,200</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="cpplus" data-id="cp2">
+                <div class="product-img-box">
+                    <img src="images/cp11.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>2MP CP-Plus Eezo Wi-Fi Cube Camera CB21</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹2,599</span>
+                        <span class="old-price">₹2,200</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="cpplus" data-id="cp3">
+                <div class="product-img-box">
+                    <img src="images/cp3.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP PLUS 2.4MP Full Color Guard+ Dome Security Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹1,999</span>
+                        <span class="old-price">₹2,200</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+             <div class="product-card" data-brand="cpplus" data-id="cp4">
+                <div class="product-img-box">
+                    <img src="images/cp4.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP PLUS CP-E35A 3MP Full HD Smart Wi-Fi CCTV Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹1,899</span>
+                        <span class="old-price">₹2,200</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+              <div class="product-card" data-brand="cpplus" data-id="cp5">
+                <div class="product-img-box">
+                    <img src="images/cp5.jpg" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP Plus 5MP HD Outdoor Bullet Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹2,359</span>
+                        <span class="old-price">₹3,200</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+              
+            <div class="product-card" data-brand="cpplus" data-id="cp6">
+                <div class="product-img-box">
+                    <img src="images/cp12.jpg" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP PLUS 2 MP Full HD Smart Wi-fi CCTV Camera | 115° Angle of View | Built-in Mic | Motion Tracking & Detection Alert | Built-in 16x Digital Zoom |</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹2,450</span>
+                        <span class="old-price">₹2,900</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+           
+            <div class="product-card" data-brand="cpplus" data-id="cp7">
+                <div class="product-img-box">
+                    <img src="images/cp7.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP Plus CP-E24A FHD 360 Degree Wi-Fi PT Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹2,849</span>
+                        <span class="old-price">₹3,900</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+           <div class="product-card" data-brand="cpplus" data-id="cp8">
+                <div class="product-img-box">
+                    <img src="images/cp8.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP Plus Wi-Fi Pt Security Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹1,449</span>
+                        <span class="old-price">₹2,100</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+           
+            <div class="product-card" data-brand="cpplus" data-id="cp9">
+                <div class="product-img-box">
+                    <img src="images/cp13.jpg" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP PLUS 2MP Full-Color Guard+ Network IR Dome 1080p Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹3,350</span>
+                        <span class="old-price">₹3,900</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+           
+            <div class="product-card" data-brand="cpplus" data-id="cp10">
+                <div class="product-img-box">
+                    <img src="images/cp14.webp" alt="CP Plus">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP Plus</p>
+                    <h3>CP Plus 2MP Full-Color Guard+ Network IR Bullet Camera</h3>
+                    <p class="specs">Two-way Audio • WiFi App</p>
+                    <div class="price-box">
+                        <span class="price">₹2,999</span>
+                        <span class="old-price">₹3,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+           
+
+
+           
+
+
+            <div class="product-card" data-brand="dahua">
+                <div class="product-img-box">
+                    <img src="images/cctv3.webp" alt="Dahua">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Dahua</p>
+                    <h3>PTZ Speed Dome</h3>
+                    <p class="specs">10x Optical Zoom • Color Night</p>
+                    <div class="price-box">
+                        <span class="price">₹5,999</span>
+                        <span class="old-price">₹8,500</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="trueview">
+                <div class="product-img-box">
+                    <img src="images/cctv4.webp" alt="Trueview">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Trueview</p>
+                    <h3>Mini Hidden Cam</h3>
+                    <p class="specs">Battery Powered • SD Slot</p>
+                    <div class="price-box">
+                        <span class="price">₹1,200</span>
+                        <span class="old-price">₹2,000</span>
+                    </div>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.brand-item');
+        const cards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+              
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-brand') === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+const productCards = document.querySelectorAll('.product-card');
+
+productCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const productId = card.getAttribute('data-id');
+        window.location.href = `product.html?id=${productId}`;
+    });
+});
+</script>
+
+
+</body>
+</html>

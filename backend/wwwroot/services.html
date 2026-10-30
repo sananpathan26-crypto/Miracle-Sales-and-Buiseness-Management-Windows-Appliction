@@ -1,0 +1,372 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Professional Security Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <style>
+        /* ===== COLOR THEME: DEEP NAVY ===== */
+        :root {
+            --primary-navy: rgb(26, 26, 64);
+            --accent-gold: #ffcc00; /* Contrast color for buttons/icons */
+            --soft-navy: #2a2a5a;
+            --light-gray: #f4f4f9;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--primary-navy);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: var(--primary-navy);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* .nav-logo .a { color: var(--accent-gold); } */
+
+        .mir {
+            color: #00b3f8;
+        }
+
+        .a {
+            color: #9ca3af;
+        }
+
+        .cle {
+            color: #facc15;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+            .nav-links a {
+                text-decoration: none;
+                color: rgba(255,255,255,0.8);
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: var(--transition);
+            }
+
+                .nav-links a:hover {
+                    color: var(--accent-gold);
+                }
+
+        .nav-icons i {
+            margin-left: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+            .nav-icons i:hover {
+                color: var(--accent-gold);
+            }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(26, 26, 64, 0.85), rgba(26, 26, 64, 0.85)), url('https://images.unsplash.com/photo-1557597774-9d2739f05a76?auto=format&fit=crop&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 5rem 8%;
+            background-color: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 4px; /* Professional sharp look */
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+            .service-card:hover {
+                transform: translateY(-10px);
+                border-bottom: 4px solid var(--accent-gold);
+                box-shadow: 0 15px 30px rgba(26, 26, 64, 0.15);
+            }
+
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .icon-box {
+            color: var(--accent-gold);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-navy);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--soft-navy);
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--primary-navy);
+            color: white;
+            padding: 5rem 8%;
+            text-align: center;
+        }
+
+            .cta-section h2 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+            .cta-btn:hover {
+                background: var(--white);
+                transform: scale(1.05);
+            }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+
+        /* product page back button */
+        .back-btn {
+            position: fixed;
+            top: 20px; /* KEEP SAME */
+            right: 40px; /* KEEP SAME */
+            left: 20;
+            background: none;
+            border: none;
+            padding: 20;
+            cursor: pointer;
+            z-index: 2000;
+            size: 25;
+        }
+
+        .back-btn {
+            color: white;
+        }
+
+        .back-btn {
+            size: 20;
+        }
+
+
+
+            /* ONLY arrow size & thickness */
+            .back-btn svg {
+                width: 40px; /* 🔥 medium size */
+                height: 40px;
+                stroke: white; /* same color */
+                stroke-width: 4.5; /* 🔥 thicker arrow */
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#categories">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <a href="index.html" class="back-btn">←</a>
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <h1 class="hero-title">Elite Security Solutions</h1>
+            <p class="hero-subtitle">PREMIUM PROTECTION FOR HOMES & CORPORATE ASSETS</p> -->
+
+            <h1 class="hero-title">Professional Security Solutions</h1>
+            <p class="hero-subtitle">
+                Advanced surveillance and smart protection systems tailored for your home and business peace of mind.
+            </p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-header">
+            <h2 class="section-title">What We Offer</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-video"></i></div>
+                <h3>CCTV Installation</h3>
+                <p>Professional deployment of Ultra-HD AI cameras with smart analytics and complete perimeter coverage.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-broadcast-tower"></i></div>
+                <h3>Remote Monitoring</h3>
+                <p>Real-time surveillance access from anywhere in the world via encrypted mobile and desktop applications.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-server"></i></div>
+                <h3>Server Integration</h3>
+                <p>Configuring secure NVR/DVR storage solutions with RAID backup and high-speed network integration.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-fingerprint"></i></div>
+                <h3>Access Control</h3>
+                <p>Biometric entry systems, RFID locks, and digital logs to manage who enters your property.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h3>Maintenance</h3>
+                <p>Comprehensive health checks, lens calibration, and 24/7 technical support for zero downtime.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-user-shield"></i></div>
+                <h3>Risk Assessment</h3>
+                <p>Tailored security audits to identify vulnerabilities and design custom-fit hardware solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Secure Your Future Today</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.8;">Expert consultation for residential and commercial security projects.</p>
+        <a href="#" class="cta-btn">Contact Our Experts</a>
+    </section>
+
+    <script src="script.js"></script>
+    <script> function openCart() {
+            window.location.href = "cart.html";
+        }</script>
+
+</body>
+</html> 

@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | CCTV Cables</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="product-page-body">
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#categories">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-btn">←</a>
+    <div class="shop-container">
+
+        <div class="brand-filters" id="filter-container">
+            <span class="brand-item active" data-filter="all">All</span>
+            <span class="brand-item" data-filter="honeywell">Honeywell</span>
+            <span class="brand-item" data-filter="cpplus">CP plus</span>
+            <span class="brand-item" data-filter="dlink">Dlink</span>
+        </div>
+
+
+
+
+        <div class="product-grid">
+
+            <div class="product-card" data-brand="honeywell" data-id="hon1">
+                <div class="product-img-box">
+                    <img src="images/hon1.webp" alt="Coaxial Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Honeywell</p>
+                    <h3>Honeywell Cat 6 SFTP Cable</h3>
+                    <p class="specs">Pure Copper • Long Distance</p>
+                    <div class="price-box">
+                        <span class="price">₹14,999</span>
+
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="honeywell" data-id="hon2">
+                <div class="product-img-box">
+                    <img src="images/hon2.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Honeywell</p>
+                    <h3>Honeywell LAN Cable 305 m Cat 6A UTP 4 Pair Solid Cable 23 AWG FRPVC 305Mtrs</h3>
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹14,224</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="honeywell" data-id="hon3">
+                <div class="product-img-box">
+                    <img src="images/hon3.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Honeywell</p>
+                    <h3>Honeywell Genesis Control Cable 1000ft Yellow</h3>
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹2,400</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="honeywell" data-id="hon4">
+                <div class="product-img-box">
+                    <img src="images/hon4.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Honeywell</p>
+                    <h3>Honeywell Genesis Cat6+ Riser Rated Network Cable</h3>
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹7,999</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="honeywell" data-id="hon5">
+                <div class="product-img-box">
+                    <img src="images/hon5.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Honeywell</p>
+                    <h3>Honeywell HDMI Cable 3m Black</h3>
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹1,999</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="cpplus" data-id="cab1">
+                <div class="product-img-box">
+                    <img src="images/cab1.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>CP PLUS Heavy Duty Outdoor Cat6 UTP Cable 100 Meter | 4 Pair LAN Cable for CCTV & Network | high-density HDPE Insulation</h3>
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹1,699</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="cpplus" data-id="cab2">
+                <div class="product-img-box">
+                    <img src="images/cab2.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>CP PLUS CCTV Camera Cable</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹1,231</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="cpplus" data-id="cab3">
+                <div class="product-img-box">
+                    <img src="images/cab3.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>CP PLUS Plastic, Copper White 90 M Wire (White) 3+1, 4 Pin, White</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹1,394</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="cpplus" data-id="cab4">
+                <div class="product-img-box">
+                    <img src="images/cab4.jpeg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>CP PLUS Plastic, Copper White 90 M Wire (White) 3+1, 4 Pin, White</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹1,250</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="cpplus" data-id="cab5">
+                <div class="product-img-box">
+                    <img src="images/cab5.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>CP Plus CP-EUT-6TGL23-100 Cat 6 100 meter Cable with High Speed connectivity</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹2,749</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="dlink" data-id="dli1">
+                <div class="product-img-box">
+                    <img src="images/dlink1.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>D Link Cat6 Outdoor Cable, UTP, 4 Pair</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹11,500</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="dli2">
+                <div class="product-img-box">
+                    <img src="images/dlink2.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>D25 LAN Cable 100 m COPPER Compatible With D_Link Cat6 Networking Cable for Router UTP Outdoor 100Meter Box</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹11,500</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="dli3">
+                <div class="product-img-box">
+                    <img src="images/dlink3.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>D-Link Cat 6 Networking Cable for Router UTP</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹6,999</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="dli4">
+                <div class="product-img-box">
+                    <img src="images/dlink4.jpg" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>D Link Cat6 Outdoor Cable, UTP, 4 Pair</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹10,500</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="dli5">
+                <div class="product-img-box">
+                    <img src="images/dlink6.webp" alt="LAN Cable">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">CP plus</p>
+                    <h3>Copper 305m D Link Cat6 Outdoor Cable, UTP, 305 Mtr</h3>
+
+                    <p class="specs">High Speed • Copper</p>
+                    <div class="price-box">
+                        <span class="price">₹9,000</span>
+                    </div>
+
+                    <button class="buy-btn1">View</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            const filterButtons = document.querySelectorAll('.brand-item');
+            const cards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-brand') === filterValue) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const productId = card.getAttribute('data-id');
+                    window.location.href = `product.html?id=${productId}`;
+                });
+            });
+
+
+            function openCart() {
+                window.location.href = "cart.html";
+            }
+        </script>
+
+
+
+
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>

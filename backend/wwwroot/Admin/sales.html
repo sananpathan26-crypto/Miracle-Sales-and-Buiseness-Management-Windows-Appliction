@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales</title>
+    <meta charset="utf-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,.1);
+        }
+
+            .stat-card h2 {
+                margin: 0;
+                font-weight: bold;
+            }
+
+            .stat-card small {
+                color: #666;
+            }
+
+        .day-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,.08);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+
+        <h3 class="mb-4">📊 Sales Overview</h3>
+
+        <!-- TOP STATS -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <h2 id="totalSales">₹0</h2>
+                    <small>Total Sales</small>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <h2 id="totalOrders">0</h2>
+                    <small>Total Orders</small>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <h2 id="totalQty">0</h2>
+                    <small>Total Quantity Sold</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>From: </label>
+            <input type="date" id="startDate" />
+            <label>To: </label>
+            <input type="date" id="endDate" />
+            <button id="filterBtn" class="btn btn-primary btn-sm">Filter</button>
+        </div>
+
+
+        <!--DAILY SALES-->
+        <h5 class="mb-3">🗓 Daily Sales</h5>
+        <div id="dailySales">Loading...</div>
+
+    </div>
+
+    <!--<script>
+        const loadSales = (startDate = '', endDate = '') => {
+            Promise.all([
+                fetch("http://localhost:5271/api/sales/summary").then(r => r.json()),
+                fetch(`http://localhost:5271/api/sales/daily?startDate=${startDate}&endDate=${endDate}`).then(r => r.json())
+            ])
+                .then(([summary, daily]) => {
+                    document.getElementById("totalSales").innerText = "₹" + Number(summary.totalSales).toFixed(2);
+                    document.getElementById("totalOrders").innerText = summary.totalOrders;
+                    document.getElementById("totalQty").innerText = summary.totalQty;
+
+                    let html = "";
+                    daily.forEach(d => {
+                        html += `
+            <div class="day-card">
+                <strong>${d.date}</strong><br>
+                Orders: ${d.orders}<br>
+                Sales: ₹${Number(d.total).toFixed(2)}
+            </div>`;
+                    });
+                    document.getElementById("dailySales").innerHTML = html;
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById("dailySales").innerHTML = "<div class='text-danger'>Failed to load sales data</div>";
+                });
+        }
+
+        // ✅ Load today's sales by default
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById("startDate").value = today;
+        document.getElementById("endDate").value = today;
+        loadSales(today, today);
+
+        // Handle filter button
+        document.getElementById("filterBtn").addEventListener("click", () => {
+            const startDate = document.getElementById("startDate").value;
+            const endDate = document.getElementById("endDate").value;
+            loadSales(startDate, endDate);
+        });
+
+    </script>-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loadSales = (startDate, endDate) => {
+                Promise.all([
+                    fetch("http://localhost:5271/api/sales/summary").then(r => r.json()),
+                    fetch(`http://localhost:5271/api/sales/daily?startDate=${startDate}&endDate=${endDate}`).then(r => r.json())
+                ])
+                    .then(([summary, daily]) => {
+
+                        document.getElementById("totalSales").innerText =
+                            "₹" + Number(summary.totalSales).toFixed(2);
+
+                        document.getElementById("totalOrders").innerText =
+                            summary.totalOrders;
+
+                        document.getElementById("totalQty").innerText =
+                            summary.totalQty;
+
+                        let html = "";
+
+                        if (daily.length === 0) {
+                            html = "<div class='text-muted'>No sales for selected date</div>";
+                        } else {
+                            daily.forEach(d => {
+                                html += `
+                            <div class="day-card">
+                                <strong>${d.date}</strong><br>
+                                Orders: ${d.orders}<br>
+                                Sales: ₹${Number(d.total).toFixed(2)}
+                            </div>`;
+                            });
+                        }
+
+                        document.getElementById("dailySales").innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        document.getElementById("dailySales").innerHTML =
+                            "<div class='text-danger'>Filter to see day wise sales</div>";
+                    });
+            };
+
+            // ✅ DEFAULT: load TODAY's sales
+            const today = new Date().toISOString().split("T")[0];
+
+            document.getElementById("startDate").value = today;
+            document.getElementById("endDate").value = today;
+
+            loadSales(today, today);
+
+            // Filter button
+            document.getElementById("filterBtn").addEventListener("click", () => {
+                const startDate = document.getElementById("startDate").value;
+                const endDate = document.getElementById("endDate").value;
+                loadSales(startDate, endDate);
+            });
+
+        });
+    </script>
+
+
+</body>
+</html>

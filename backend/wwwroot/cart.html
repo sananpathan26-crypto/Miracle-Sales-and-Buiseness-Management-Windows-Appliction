@@ -1,0 +1,400 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Premium Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --glass: rgba(255, 255, 255, 0.85);
+            --text-main: #1e293b;
+        }
+
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            margin: 0;
+        }
+
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 40px;
+        }
+
+        .cart-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+            .cart-item img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 18px;
+            }
+
+        .item-info {
+            flex-grow: 1;
+            padding: 0 25px;
+        }
+
+            .item-info h4 {
+                margin: 0 0 8px 0;
+                font-size: 1.2rem;
+            }
+
+        /* Quantity Controls */
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0,0,0,0.05);
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .qty-btn {
+            background: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .qty-btn:hover {
+                background: var(--primary);
+                color: white;
+            }
+
+        .qty-val {
+            font-weight: 700;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .item-price-tag {
+            text-align: right;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        /* Sidebar Summary */
+        .summary {
+            background: #1e293b;
+            color: white;
+            padding: 40px;
+            border-radius: 32px;
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            opacity: 0.8;
+        }
+
+        .grand-total-row {
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+            .checkout-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <!--
+                <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+            just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-btn">←</a>
+
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div class="layout">
+            <div id="cart-container"></div>
+            <div class="summary">
+                <h3>Order Summary</h3>
+                <div class="summary-line"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+                <div class="summary-line"><span>Shipping</span><span style="color: #4ade80;">FREE</span></div>
+                <div class="grand-total-row" id="grand-total">₹0</div>
+                <button class="checkout-btn">Checkout Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Load the Cart on start
+        async function loadCart() {
+            try {
+                const res = await fetch("/api/cart/mycart", { credentials: "include" });
+                if (!res.ok) throw new Error("Not logged in");
+                const data = await res.json();
+                renderCart(data);
+            } catch (error) {
+                document.getElementById("cart-container").innerHTML = "<h3 style='text-align:center'>Please login to view cart</h3>";
+                document.querySelector('.summary').style.display = 'none';
+            }
+        }
+
+        // 2. Render items into HTML
+        //function renderCart(items) {
+        //    const container = document.getElementById("cart-container");
+        //    container.innerHTML = "";
+        //    let grandTotal = 0;
+
+        //    items.forEach(item => {
+        //        const itemTotal = Number(item.price) * item.quantity;
+        //        grandTotal += itemTotal;
+
+        //        container.innerHTML += `
+        //                                <div class="cart-item">
+        //                                    <img src="${item.image}" alt="${item.name}">
+        //                                    <div class="item-info">
+        //                                        <h4>${item.name}</h4>
+        //                                        <p>₹${Number(item.price).toLocaleString()}</p>
+        //                                        <div class="qty-controls">
+        //                                            <button class="qty-btn" onclick="updateQty('${item.productId}', -1)">-</button>
+        //                                            <span class="qty-val">${item.quantity}</span>
+        //                                            <button class="qty-btn" onclick="updateQty('${item.productId}', 1)">+</button>
+        //                                        </div>
+        //                                    </div>
+        //                                    <div class="item-price-tag">₹${itemTotal.toLocaleString()}</div>
+        //                                </div>
+        //                            `;
+        //    });
+
+        //    const formatted = "₹" + grandTotal.toLocaleString();
+        //    document.getElementById("subtotal").innerText = formatted;
+        //    document.getElementById("grand-total").innerText = formatted;
+        //}
+
+
+        function renderCart(items) {
+            const container = document.getElementById("cart-container");
+            container.innerHTML = "";
+
+            let grandTotal = 0;
+            let totalQty = 0;   // ✅ for navbar badge
+
+            items.forEach(item => {
+                const itemTotal = Number(item.price) * item.quantity;
+                grandTotal += itemTotal;
+                totalQty += item.quantity;   // ✅ count quantity
+
+                container.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="item-info">
+                    <h4>${item.name}</h4>
+                    <p>₹${Number(item.price).toLocaleString()}</p>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="updateQty('${item.productId}', -1)">-</button>
+                        <span class="qty-val">${item.quantity}</span>
+                        <button class="qty-btn" onclick="updateQty('${item.productId}', 1)">+</button>
+                    </div>
+                </div>
+                <div class="item-price-tag">₹${itemTotal.toLocaleString()}</div>
+            </div>
+        `;
+            });
+
+            const formatted = "₹" + grandTotal.toLocaleString();
+            document.getElementById("subtotal").innerText = formatted;
+            document.getElementById("grand-total").innerText = formatted;
+
+            // ✅ THIS updates navbar badge
+            document.getElementById("cart-count").innerText = totalQty;
+        }
+
+        // 3. Handle Quantity Updates
+        async function updateQty(productId, change) {
+            try {
+                // NOTE: Replace this URL with your actual API endpoint for updating quantity
+                const res = await fetch("/api/cart/update", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ productId, change }),
+                    credentials: "include"
+                });
+
+                if (res.ok) {
+                    // Refresh the cart to show updated numbers
+                    loadCart();
+                }
+            } catch (err) {
+                console.error("Failed to update quantity", err);
+            }
+        }
+
+        loadCart();
+         // ✅ update navbar badge also
+
+
+
+        const checkoutBtn = document.querySelector(".checkout-btn");
+
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener("click", async () => {
+
+                const res = await fetch("/api/cart/mycart", {
+                    credentials: "include"
+                });
+
+                if (!res.ok) {
+                    alert("Please login first");
+                    return;
+                }
+
+                const data = await res.json();
+
+                if (data.length === 0) {
+                    alert("Cart is empty");
+                    return;
+                }
+
+                let total = 0;
+                let names = [];
+
+                data.forEach(item => {
+                    names.push(item.name);   // use API property, not DB column
+                    total += Number(item.price) * item.quantity;
+                });
+
+                const combinedName = names.join(", ");
+                const combinedPrice = "₹" + total;
+
+                window.location.href =
+                    `./checkout.html?name=${encodeURIComponent(combinedName)}&price=${encodeURIComponent(combinedPrice)}`;
+            });
+
+
+
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+       
+
+   

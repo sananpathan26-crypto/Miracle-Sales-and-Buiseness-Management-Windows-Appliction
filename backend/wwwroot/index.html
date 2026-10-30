@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Advanced CCTV Solutions</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#categories">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <!--<div class="cart-icon" onclick="openCart()">
+        <i class="fas fa-shopping-cart" title="Cart"></i>
+        <span id="cart-count">0</span>
+    </div>-->
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <!--
+        <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+    just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Eyes When <span class="highlight">You’re Not There.</span></h1>
+            <p class="hero-subtitle">
+                Professional surveillance for home and business. Experience Ultra-HD 4K clarity,
+                AI motion detection, and seamless mobile integration.
+            </p>
+            <div class="hero-btns">
+                <a href="cameras.html" class="btn-primary">Explore Cameras</a>
+                <a href="#" class="btn-secondary">Get a Free Quote</a>
+            </div>
+            <div class="hero-stats">
+                <span><i class="fas fa-shield-alt"></i> 24/7 Secure</span>
+                <span><i class="fas fa-video"></i> AI Detection</span>
+                <span><i class="fas fa-mobile-alt"></i> Remote Access</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-wrapper" id="image-gallery">
+                <img src="images/cc.jpeg" class="gallery-img active" alt="Camera View 1">
+                <img src="images/cctv2.jpg" class="gallery-img" alt="Camera View 2">
+                <img src="images/cctv3.webp" class="gallery-img" alt="Camera View 3">
+                <img src="images/tv.jpeg" class="gallery-img" alt="Camera View 4">
+                <img src="images/cctv4.webp" class="gallery-img" alt="Camera View 5">
+
+                <div class="pulse-ring"></div>
+            </div>
+
+        </div>
+    </section>
+    <section class="categories" id="categories">
+        <h2 class="section-title">Our CCTV Categories</h2>
+
+        <div class="category-grid">
+
+            <a href="cameras.html" class="category-link">
+                <div class="category-card">
+                    <i class="fas fa-video"></i>
+                    <h3>CCTV Cameras</h3>
+                    <p>HD, 4K, Night Vision & AI Cameras</p>
+                </div>
+            </a>
+
+            <a href="dvr-nvr.html" class="category-link">
+                <div class="category-card">
+                    <i class="fas fa-hdd"></i>
+                    <h3>DVR / NVR</h3>
+                    <p>Secure video recording solutions</p>
+                </div>
+            </a>
+
+            <!-- ✅ FIXED CABLES LINK -->
+            <a href="cables.html" class="category-link">
+                <div class="category-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Cables</h3>
+                    <p>High-quality coaxial & LAN cables</p>
+                </div>
+            </a>
+
+            <a href="hardisk.html" class="category-link">
+                <div class="category-card">
+                    <i class="fas fa-hard-drive hardisk-icon"></i>
+
+
+                    <h3>Hardisk</h3>
+                    <p>Reliable adapters & SMPS units</p>
+                </div>
+            </a>
+
+            <a href="router.html" class="category-link">
+                <div class="category-card">
+                    <i class="fa-solid fa-router"></i>
+
+                    <h3>Routers</h3>
+                    <p>Stable networking for CCTV systems</p>
+                </div>
+            </a>
+
+            <a href="userproduct.html" class="category-link">
+                <div class="category-card">
+                    <i class="fa-solid fa-router"></i>
+
+                    <h3>New Products</h3>
+                    <p>New Products by Admin</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+   
+</body>
+</html>

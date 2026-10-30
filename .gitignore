@@ -1,0 +1,19 @@
+# Visual Studio temporary files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# Temporary files
+*.tmp
+*.log
+
+# Backup archives
+*.rar
+*.zip

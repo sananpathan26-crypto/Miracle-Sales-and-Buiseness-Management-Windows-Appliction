@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Routers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="product-page-body">
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-btn">←</a>
+
+    <div class="shop-container">
+
+        <!-- Brand Filter -->
+        <div class="brand-filters">
+            <span class="brand-item active" data-filter="all">All</span>
+            <span class="brand-item" data-filter="tplink">TP-Link</span>
+            <span class="brand-item" data-filter="dlink">D-Link</span>
+            <span class="brand-item" data-filter="tenda">Tenda</span>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+
+            <!-- Router 1 -->
+            <div class="product-card" data-brand="tplink" data-id="rt1">
+                <div class="product-img-box">
+                    <img src="images/tp1.jpg" alt="TP-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">TP-Link</p>
+                    <h3>TP-Link Archer AX12 WiFi6 Router AX1500 1xGb WAN Dual-Band</h3>
+                    <p class="specs">Dual Band • Gigabit</p>
+                    <div class="price-box">
+                        <span class="price">₹3,625</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-brand="tplink" data-id="rt2">
+                <div class="product-img-box">
+                    <img src="images/tp2.jpg" alt="TP-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">TP-Link</p>
+                    <h3> TP-Link TL-WR850N N300 Wi-Fi Router</h3>
+                    <p class="specs">Dual Band • Gigabit</p>
+                    <div class="price-box">
+                        <span class="price">₹1,059</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="tplink" data-id="rt3">
+                <div class="product-img-box">
+                    <img src="images/tp3.jpg" alt="TP-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">TP-Link</p>
+                    <h3> TP-Link Archer AX23 AX1800 Dual-Band Wi-Fi 6 Router 1800 Mbps Speed Gigabit Wireless </h3>
+                    <p class="specs">Dual Band • Gigabit</p>
+                    <div class="price-box">
+                        <span class="price">₹3,899</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="tplink" data-id="rt4">
+                <div class="product-img-box">
+                    <img src="images/tp4.jpg" alt="TP-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">TP-Link</p>
+                    <h3>TP-Link Archer BE400 Dual-Band BE6500 WiFi 7 Router </h3>
+                    <p class="specs">Dual Band • Gigabit</p>
+                    <div class="price-box">
+                        <span class="price">₹11,999</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="tplink" data-id="rt5">
+                <div class="product-img-box">
+                    <img src="images/tp5.webp" alt="TP-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">TP-Link</p>
+                    <h3>TP-Link Archer C5400X Gaming Router 2.4 GHz </h3>
+                    <p class="specs">Dual Band • Gigabit</p>
+                    <div class="price-box">
+                        <span class="price">₹10,199</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <!-- Router 2 -->
+            <div class="product-card" data-brand="dlink" data-id="rt6">
+                <div class="product-img-box">
+                    <img src="images/dro1.jpg" alt="D-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">D-Link</p>
+                    <h3>D-Link dir-806in - AC750 Dual Band Wireless Router Multiple Operating Modes Router Black</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹1,179</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="rt7">
+                <div class="product-img-box">
+                    <img src="images/dro2.jpg" alt="D-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">D-Link</p>
+                    <h3>D-Link DIR-2150 AC2100 Mbps MU-MIMO Dual Band Wi-Fi Router</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹2,799</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="dlink" data-id="rt8">
+                <div class="product-img-box">
+                    <img src="images/dro3.jpg" alt="D-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">D-Link</p>
+                    <h3>D-Link dir-811in 1200 Mbps Wireless Router White, Dual Band</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹1,119</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="dlink" data-id="rt9">
+                <div class="product-img-box">
+                    <img src="images/dro4.jpg" alt="D-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">D-Link</p>
+                    <h3>D-Link Wireless N Router</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹6,032</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+
+            <div class="product-card" data-brand="dlink" data-id="rt10">
+                <div class="product-img-box">
+                    <img src="images/dro5.jpg" alt="D-Link Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">D-Link</p>
+                    <h3>D-Link R04 N300 Eagle PRO AI Advance Parental Control Router With Voice Control Assistant White</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹1,549</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <!-- Router 3-->
+            <div class="product-card" data-brand="tenda" data-id="rt11">
+                <div class="product-img-box">
+                    <img src="images/ten1.jpg" alt="tenda Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Tenda</p>
+                    <h3>Tenda AC5 V3 AC1200 Wireless Dual Band Wifi Router,Speed Up To 867Mbps/5Ghz + 300Mbps/2.4Ghz, IPV6, Parental Control </h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹1,449</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="tenda" data-id="rt12">
+                <div class="product-img-box">
+                    <img src="images/ten2.jpg" alt="tenda Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Tenda</p>
+                    <h3>Tenda Wifi 6 Router For Home, AX1500 Dual Band Gigabit Router For Wireless Internet</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹5,999</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="tenda" data-id="rt13">
+                <div class="product-img-box">
+                    <img src="images/ten3.jpg" alt="tenda Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Tenda</p>
+                    <h3>Tenda Wifi 6 Router For Home, AX1500 Dual Band Gigabit Router For Wireless Internet</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹2,899</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="tenda" data-id="rt14">
+                <div class="product-img-box">
+                    <img src="images/ten4.jpg" alt="tenda Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Tenda</p>
+                    <h3>TENDA TE-D151 N Wireless ADSL2+ Modem 150 Mbps Wireless Router White Single Band</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹789</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="tenda" data-id="rt15">
+                <div class="product-img-box">
+                    <img src="images/ten5.jpg" alt="tenda Router">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Tenda</p>
+                    <h3>Tenda AC10 AC1200 Wireless Smart Dual-Band Gigabit Wifi Router, MU-MIMO, 4 Gigabit Ports</h3>
+                    <p class="specs">Dual Band • MU-MIMO</p>
+                    <div class="price-box">
+                        <span class="price">₹1,849</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- View Button Redirect-->
+    <script>
+document.querySelectorAll('.buy-btn1').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.product-card');
+        const id = card.dataset.id;
+        window.location.href = `product.html?id=${id}`;
+    });
+});
+
+
+
+        const brandItems = document.querySelectorAll('.brand-item');
+        const products = document.querySelectorAll('.product-card');
+
+        brandItems.forEach(item => {
+            item.addEventListener('click', () => {
+
+                // Remove active class from all
+                brandItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const filter = item.getAttribute('data-filter');
+
+                products.forEach(product => {
+                    const brand = product.getAttribute('data-brand');
+
+                    if (filter === 'all' || brand === filter) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+
+            });
+        });
+
+        //function openCart() {
+        //    window.location.href = "cart.html";
+        //}
+    </script>
+
+    <script src="script.js"></script>
+   
+
+   
+
+</body>
+</html>

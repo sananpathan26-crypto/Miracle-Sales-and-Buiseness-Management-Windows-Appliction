@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Purchase</title>
+    <style>
+        :root {
+            --primary: #1a1a40;
+            --secondary: #3b3b98;
+            --accent: #facc15;
+            --text-dark: #2d3436;
+            --bg-soft: #f0f2f5;
+        }
+
+        /*body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background:*/
+            /* linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), */
+            /*url("images/bilimg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }*/
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: url("images/bilimg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+        .page-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            padding: 35px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+
+
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 20px;
+            background: var(--bg-soft);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+            .back-arrow:hover {
+                background: var(--accent);
+            }
+
+        h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        /* Product Box */
+        .product-card {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #e0e4ff;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .product-price-each {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .qty-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+
+
+        /* Update these specific sections in your CSS */
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            background: #fff; /* Ensures white background */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 34px; /* Fixed height ensures alignment */
+            width: fit-content;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            background: #f1f1f1;
+            border: none;
+            width: 34px;
+            height: 100%; /* Match parent height */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            color: #1a1a40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+            .qty-btn:hover {
+                background: #e2e2e2;
+            }
+
+        #quantity {
+            width: 45px;
+            height: 100%;
+            text-align: center;
+            border: none;
+            font-weight: 800;
+            font-size: 16px;
+            color: #1a1a40; /* Force dark text color */
+            background: #ffffff !important; /* Force white background */
+            padding: 0; /* Remove padding that might hide text */
+            margin: 0;
+            -moz-appearance: textfield; /* Remove arrows in Firefox */
+        }
+
+            /* Removes arrows/spinners from the number input for a cleaner look */
+            #quantity::-webkit-outer-spin-button,
+            #quantity::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+        .total-box {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        /* Form */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+            input:focus {
+                border-color: var(--secondary);
+                outline: none;
+            }
+
+        button[type="submit"] {
+            width: 100%;
+            background: var(--primary);
+            color: var(--accent);
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+            button[type="submit"]:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+            }
+
+            button[type="submit"]:hover:not(:disabled) {
+                background: var(--secondary);
+                transform: translateY(-2px);
+            }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <a href="index.html">Home</a>
+            <li><a href="#categories">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+
+
+            <!--
+                <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+            just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <a href="index.html" class="back-btn">←</a>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <a href="product.html" class="back-arrow">←</a>
+            <h2>Complete Order</h2>
+
+            <div class="product-card">
+                <span class="product-name" id="productName">Loading...</span>
+                <span class="product-price-each">Price: <span id="productPrice">₹0</span></span>
+
+                <div class="qty-row">
+                    <span>Quantity</span>
+                    <div class="qty-controls">
+                        <button type="button" class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" readonly>
+                        <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="total-box">
+                    <span>Total Payable</span>
+                    <span>₹<span id="totalPrice">0</span></span>
+                </div>
+            </div>
+
+            <form id="orderForm">
+                <div class="input-group">
+                    <label for="custName">Full Name</label>
+                    <input type="text" id="custName" placeholder="Your Name" required>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <div class="input-group" style="flex: 2;">
+                        <label for="custMobile">Mobile Number</label>
+                        <input type="tel" id="custMobile" placeholder="Phone" required>
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <label for="paymentMode">Payment</label>
+                        <select id="paymentMode" required>
+                            <option value="UPI">UPI</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Card">Card</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="custEmail">Email Address</label>
+                    <input type="email" id="custEmail" placeholder="email@example.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="custAddress">Shipping Address</label>
+                    <textarea id="custAddress" rows="3" placeholder="Full Address..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const API = "http://localhost:5271";
+
+        // 1. Get Params
+        const params = new URLSearchParams(window.location.search);
+        const productName = params.get("name") || "Product";
+        const rawPrice = params.get("price") || "0";
+        const productPrice = Number(rawPrice.replace(/[₹,]/g, ""));
+
+        // 2. Initial UI Populate
+        document.getElementById("productName").innerText = productName;
+        document.getElementById("productPrice").innerText = "₹" + productPrice.toLocaleString('en-IN');
+
+        const qtyInput = document.getElementById("quantity");
+        const totalSpan = document.getElementById("totalPrice");
+        const submitBtn = document.getElementById("submitBtn");
+
+        function updateTotal() {
+            const total = productPrice * Number(qtyInput.value);
+            totalSpan.innerText = total.toLocaleString('en-IN');
+        }
+
+        function changeQty(val) {
+            let qty = Number(qtyInput.value) + val;
+            if (qty < 1) qty = 1;
+            qtyInput.value = qty;
+            updateTotal();
+        }
+
+        updateTotal();
+
+        // 3. Submit Logic
+        document.getElementById("orderForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // UI Feedback
+            submitBtn.innerText = "Processing Order...";
+            submitBtn.disabled = true;
+
+            const orderData = {
+                customerName: document.getElementById("custName").value,
+                mobile: document.getElementById("custMobile").value,
+                email: document.getElementById("custEmail").value,
+                address: document.getElementById("custAddress").value,
+                productName: productName,
+                price: productPrice,
+                quantity: Number(qtyInput.value),
+                paymentMode: document.getElementById("paymentMode").value
+            };
+
+            fetch(`${API}/api/orders/place`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(orderData)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        window.location.href = "order-confirmed.html";
+                    } else {
+                        alert("Order failed. Please try again.");
+                        resetButton();
+                    }
+                })
+                .catch(() => {
+                    alert("Backend server is not reachable.");
+                    resetButton();
+                });
+        });
+
+        function resetButton() {
+            submitBtn.innerText = "Place Order";
+            submitBtn.disabled = false;
+        }
+
+
+        function openCart() {
+            window.location.href = "cart.html";
+        }
+    </script>
+
+
+
+
+</body>
+</html>

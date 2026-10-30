@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRACLE | Premium Cameras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <style>
+
+            .brand-filters {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px; /* ADD THIS */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+
+            .brand-item {
+                color: #facc15;
+                font-weight: bold;
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .brand-item:hover, .brand-item.active {
+                color: #ffffff;
+                text-decoration: underline;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+
+            .product-card.hidden {
+                display: none;
+            }
+        </style> -->
+</head>
+<body class="product-page-body">
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="mir">MIR</span><span class="a">A</span><span class="cle">CLE</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search cameras...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart" title="Cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <!-- <i class="fas fa-user" title="Profile"></i> -->
+            <!--
+            just for profile -->
+
+            <div class="profile-wrapper">
+                <i class="fas fa-user" id="profile-btn" title="Profile"></i>
+
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Guest User</h4>
+                            <p>guest@email.com</p>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="profile.html">My Account</a></li>
+                        <li><a href="MyOrders.html">Orders</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="logout"><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="index.html" class="back-btn">←</a>
+    <div class="shop-container">
+
+        <div class="brand-filters" id="filter-container">
+            <span class="brand-item active" data-filter="all">All</span>
+            <span class="brand-item" data-filter="hikvision">HIKVISION</span>
+        </div>
+
+
+        <!-- DVR / NVR PRODUCTS -->
+        <div class="product-grid">
+
+            <div class="product-card" data-brand="hikvision" data-id="dvr1">
+                <div class="product-img-box">
+                    <img src="images/dvr1.jpg">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision 8 Channel DVR</h3>
+                    <p class="specs">1080P • H.265+</p>
+                    <div class="price-box">
+                        <span class="price">₹3,999</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="hikvision" data-id="nvr1">
+                <div class="product-img-box">
+                    <img src="images/nvr1.webp">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision AcuSense NVR</h3>
+                    <p class="specs">4K • AI Detection</p>
+                    <div class="price-box">
+                        <span class="price">₹9,189</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="hikvision" data-id="nvr2">
+                <div class="product-img-box">
+                    <img src="images/nvr2.jpg">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision DS-9664NI-M8 M-Series 8K 64-Channel 32MP NVR H.265, 8 SATA No HDD Included</h3>
+                    <p class="specs">4K • AI Detection</p>
+                    <div class="price-box">
+                        <span class="price">₹1,635</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+
+            <div class="product-card" data-brand="hikvision" data-id="nvr3">
+                <div class="product-img-box">
+                    <img src="images/nvr3.jpg">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision USA NVR Digital Video Recorder DS9616NII88TB</h3>
+                    <p class="specs">4K • AI Detection</p>
+                    <div class="price-box">
+                        <span class="price">₹4,00,933</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-brand="hikvision" data-id="nvr4">
+                <div class="product-img-box">
+                    <img src="images/nvr4.jpg">
+                </div>
+                <div class="product-info">
+                    <p class="brand-tag">Hikvision</p>
+                    <h3>Hikvision 8K 32 Channel NVR 16Ch-Poe 32MP H.265 4X SATA DS-7732NI-M416P No HDD Included</h3>
+                    <p class="specs">4K • AI Detection</p>
+                    <div class="price-box">
+                        <span class="price">₹1,00,000</span>
+                    </div>
+                    <button class="buy-btn1">View</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <!-- SAME FILTER SCRIPT -->
+    <script>
+        const filterButtons = document.querySelectorAll('.brand-item');
+        const cards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+                cards.forEach(card => {
+                    card.classList.toggle(
+                        'hidden',
+                        filter !== 'all' && card.dataset.brand !== filter
+                    );
+                });
+            });
+        });
+
+
+
+
+        // just for profile
+
+        //// ===== PROFILE DROPDOWN =====
+        //const profileBtn = document.getElementById('profile-btn');
+        //const profileDropdown = document.getElementById('profile-dropdown');
+
+        //if (profileBtn && profileDropdown) {
+        //    profileBtn.addEventListener('click', (e) => {
+        //        e.stopPropagation();
+        //        profileDropdown.classList.toggle('active');
+        //    });
+
+        //    document.addEventListener('click', (e) => {
+        //        if (!e.target.closest('.profile-wrapper')) {
+        //            profileDropdown.classList.remove('active');
+        //        }
+        //    });
+        //}
+
+    </script>
+
+    <!-- SAME CLICK HANDLER -->
+    <script>
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                window.location.href = `product.html?id=${card.dataset.id}`;
+            });
+        });
+
+
+
+        //function openCart() {
+        //    window.location.href = "cart.html";
+        //}
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
